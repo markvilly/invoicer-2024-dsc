@@ -67,7 +67,7 @@ function App() {
             <div className="flex flex-col justify-center">
               <label htmlFor="name">Full Name</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="text"
                 name="text"
                 id="name"
@@ -78,7 +78,7 @@ function App() {
               />
               <label htmlFor="address">Address</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="text"
                 name="text"
                 id="address"
@@ -90,7 +90,7 @@ function App() {
 
               <label htmlFor="email">Email</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="email"
                 name="email"
                 id="email"
@@ -102,7 +102,7 @@ function App() {
 
               <label htmlFor="website">Website</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="url"
                 name="website"
                 id="website"
@@ -114,7 +114,7 @@ function App() {
 
               <label htmlFor="bankName">Bank Name</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="name"
                 name="bankName"
                 id="bankName"
@@ -126,7 +126,7 @@ function App() {
 
               <label htmlFor="bankAccount">Bank Account Number</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="name"
                 name="bankAccount"
                 id="bankAccount"
@@ -138,7 +138,7 @@ function App() {
 
               <label htmlFor="branchName">Branch Name</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="name"
                 name="branchName"
                 id="branchName"
@@ -150,7 +150,7 @@ function App() {
 
               <label htmlFor="clientName">Client Name</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="name"
                 name="clientName"
                 id="clientName"
@@ -162,7 +162,7 @@ function App() {
 
               <label htmlFor="clientAddress">Client Address</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="text"
                 name="clientAddress"
                 id="clientAddress"
@@ -174,7 +174,7 @@ function App() {
 
               <label htmlFor="invoiceNumber">Invoice Number</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="text"
                 name="invoiceNumber"
                 id="invoiceNumber"
@@ -186,7 +186,7 @@ function App() {
 
               <label htmlFor="invoiceDate">Invoice Date</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="date"
                 name="invoiceDate"
                 id="invoiceDate"
@@ -198,7 +198,7 @@ function App() {
 
               <label htmlFor="dueDate">Due Date</label>
               <input
-                className="mb-5 mt-1 border-2 border-grey-500"
+                className="mb-5 mt-1 "
                 type="date"
                 name="dueDate"
                 id="dueDate"
@@ -210,7 +210,7 @@ function App() {
 
               <label htmlFor="notes">Addition Notes</label>
               <textarea
-                className="mt-2 p-2 border-2 border-grey-200 rounded"
+                className="mt-2 p-2  rounded"
                 name="notes"
                 id="notess"
                 cols="30"
