@@ -52,7 +52,12 @@ function App() {
               invoiceNumber={invoiceNumber}
               dueDate={dueDate}
             />
-            <Table description={description} />
+            <Table
+              description={description}
+              quantity={quantity}
+              rate={rate}
+              amount={amount}
+            />
             <Notes notes={notes} />
             <Footer
               name={name}
@@ -285,6 +290,12 @@ function App() {
                 <TableForm
                   description={description}
                   setDescription={setDescription}
+                  quantity={quantity}
+                  setQuantity={setQuantity}
+                  rate={rate}
+                  setRate={setRate}
+                  amount={amount}
+                  setAmount={setAmount}
                 />
               </article>
 
