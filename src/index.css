@@ -10,6 +10,9 @@ body {
 
 label {
   margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #525252;
 }
 
 input,
