@@ -52,7 +52,7 @@ function App() {
               invoiceNumber={invoiceNumber}
               dueDate={dueDate}
             />
-            <Table />
+            <Table description={description} />
             <Notes notes={notes} />
             <Footer
               name={name}
@@ -282,7 +282,10 @@ function App() {
               {/* OUR TABLE FORM */}
 
               <article>
-                <TableForm />
+                <TableForm
+                  description={description}
+                  setDescription={setDescription}
+                />
               </article>
 
               <label htmlFor="notes">Addition Notes</label>

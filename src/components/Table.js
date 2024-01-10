@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Table() {
+export default function Table({ description }) {
   return (
     <div>
       <table width="100%">
@@ -14,7 +14,7 @@ export default function Table() {
         </thead>
         <tbody>
           <tr>
-            <td>Swimming Term Fees -Seals Term 1: 3x a Week</td>
+            <td>{description}</td>
             <td className="text-center">2</td>
             <td className="text-center">686440.68</td>
             <td className="text-center">{686440.68 * 2}</td>
