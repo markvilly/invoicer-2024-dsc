@@ -65,64 +65,78 @@ function App() {
             {/* name, address, client name, client address, invoice number, invoice date, due date, notes */}
 
             <div className="flex flex-col justify-center">
-              <label htmlFor="name">Full Name</label>
-              <input
-                className="mb-5 mt-1 "
-                type="text"
-                name="text"
-                id="name"
-                placeholder="Enter your name"
-                autoComplete="off"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <label htmlFor="address">Address</label>
-              <input
-                className="mb-5 mt-1 "
-                type="text"
-                name="text"
-                id="address"
-                placeholder="Enter your Address"
-                autoComplete="off"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-              />
+              <article className="md:grid grid-cols-2 gap-10">
+                <div className="flex flex-col">
+                  <label htmlFor="name">Full Name</label>
+                  <input
+                    className="mb-5 mt-1 "
+                    type="text"
+                    name="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    autoComplete="off"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label htmlFor="address">Address</label>
+                  <input
+                    className="mb-5 mt-1 "
+                    type="text"
+                    name="text"
+                    id="address"
+                    placeholder="Enter your Address"
+                    autoComplete="off"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                  />
+                </div>
+              </article>
 
-              <label htmlFor="email">Email</label>
-              <input
-                className="mb-5 mt-1 "
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                autoComplete="off"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+              <article className="md:grid grid-cols-2 gap-10">
+                <div className="flex flex-col">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    className="mb-5 mt-1 "
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    autoComplete="off"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
 
-              <label htmlFor="website">Website</label>
-              <input
-                className="mb-5 mt-1 "
-                type="url"
-                name="website"
-                id="website"
-                placeholder="Enter your website"
-                autoComplete="off"
-                value={website}
-                onChange={(e) => setWebsite(e.target.value)}
-              />
+                <div className="flex flex-col">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    className="mb-5 mt-1 "
+                    type="url"
+                    name="website"
+                    id="website"
+                    placeholder="Enter your website"
+                    autoComplete="off"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                  />
+                </div>
 
-              <label htmlFor="bankName">Bank Name</label>
-              <input
-                className="mb-5 mt-1 "
-                type="name"
-                name="bankName"
-                id="bankName"
-                placeholder="Enter your Bank Name"
-                autoComplete="off"
-                value={bankName}
-                onChange={(e) => setBankName(e.target.value)}
-              />
+                <div className="flex flex-col">
+                  <label htmlFor="bankName">Bank Name</label>
+                  <input
+                    className="mb-5 mt-1 "
+                    type="name"
+                    name="bankName"
+                    id="bankName"
+                    placeholder="Enter your Bank Name"
+                    autoComplete="off"
+                    value={bankName}
+                    onChange={(e) => setBankName(e.target.value)}
+                  />
+                </div>
+              </article>
 
               <label htmlFor="bankAccount">Bank Account Number</label>
               <input
