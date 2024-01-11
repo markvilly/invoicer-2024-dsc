@@ -49,10 +49,10 @@ export default function Table({ list, total }) {
           </tr>
         </tbody>
       </table>
-      <div className="mb-10 border-gray-300 w-40%">
-        <h2 className="flex items-end justify-end font-bold text-4xl text-gray-800 border-t-2 ">
-          Tshs. {total.toLocaleString()}
-        </h2>
+      <div className="mb-10 ">
+        <div className="flex w-1/2 ml-auto items-end justify-end font-bold text-4xl text-gray-800  border-blackened border-b-2 py-2 mt-2">
+          TOTAL Tshs. {total.toLocaleString()}
+        </div>
       </div>
     </div>
   );

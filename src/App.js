@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import ClientDetails from "./components/ClientDetails";
 import Dates from "./components/Dates";
@@ -8,6 +8,7 @@ import MainDetails from "./components/MainDetails";
 import Notes from "./components/Notes";
 import Table from "./components/Table";
 import TableForm from "./components/TableForm";
+import ReactToPrint from "react-to-print";
 
 function App() {
   const [showInvoice, setShowInvoice] = useState(false);
@@ -35,56 +36,67 @@ function App() {
   const [list, setList] = useState([]);
   const [total, setTotal] = useState(0);
 
+  const componentRef = useRef();
+
   const handlePrint = () => {
     window.print();
   };
   return (
     <div className="App">
       <main className="bg-white p-5 m-5 md:max-w-xl md:mx-auto lg:mx-auto xl:max-w-4xl rounded shadow">
+        <ReactToPrint
+          trigger={() => (
+            <button className="bg-gray-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-gray-500 hover:bg-transparent hover:text-gray-500 mb-5 transition-all duration-300 ">
+              Print/ Download
+            </button>
+          )}
+          content={() => componentRef.current}
+        />
         {showInvoice ? (
-          <div>
-            <Header handlePrint={handlePrint} />
-            <MainDetails name={name} address={address} />
-            <Dates
-              invoiceDate={invoiceDate}
-              invoiceNumber={invoiceNumber}
-              dueDate={dueDate}
-            />
-            <ClientDetails
-              clientName={clientName}
-              clientAddress={clientAddress}
-              clientEmail={clientEmail}
-              phone={phone}
-            />
+          <>
+            <div ref={componentRef} className="p-5">
+              <Header handlePrint={handlePrint} />
+              <MainDetails name={name} address={address} />
+              <Dates
+                invoiceDate={invoiceDate}
+                invoiceNumber={invoiceNumber}
+                dueDate={dueDate}
+              />
+              <ClientDetails
+                clientName={clientName}
+                clientAddress={clientAddress}
+                clientEmail={clientEmail}
+                phone={phone}
+              />
 
-            <Table
-              description={description}
-              quantity={quantity}
-              rate={rate}
-              amount={amount}
-              list={list}
-              setList={setList}
-              total={total}
-              setTotal={setTotal}
-              phone={phone}
-              clientEmail={clientEmail}
-            />
-            <Notes notes={notes} />
-            <Footer
-              name={name}
-              address={address}
-              website={website}
-              email={email}
-              branch={branch}
-            />
-
+              <Table
+                description={description}
+                quantity={quantity}
+                rate={rate}
+                amount={amount}
+                list={list}
+                setList={setList}
+                total={total}
+                setTotal={setTotal}
+                phone={phone}
+                clientEmail={clientEmail}
+              />
+              <Notes notes={notes} />
+              <Footer
+                name={name}
+                address={address}
+                website={website}
+                email={email}
+                branch={branch}
+              />
+            </div>
             <button
               onClick={() => setShowInvoice(false)}
               className="mt-5 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300 "
             >
               Edit information
             </button>
-          </div>
+          </>
         ) : (
           <>
             {/* name, address, client name, client address, invoice number, invoice date, due date, notes */}

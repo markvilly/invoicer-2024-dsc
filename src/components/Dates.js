@@ -5,7 +5,7 @@ export default function Dates({ invoiceNumber, invoiceDate, dueDate }) {
     <div>
       {/* Dates*/}
 
-      <article className="mt-4 mb-5 flex  items-end justify-between">
+      <article className="mt-10 mb-10 flex  items-end justify-between">
         <ul className="md:grid grid-cols-3 gap-10">
           <div className="">
             <span className=" font-bold text-gray-400 italic">

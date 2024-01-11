@@ -5,9 +5,9 @@ export default function Notes() {
     <div>
       {/* Notes */}
 
-      <section className="mt-20 mb-5">
+      <section className="mt-20 mb-5 flex grid grid-cols-1">
         {/* text area */}
-        <p className="lg:w-1/2 text-justify">
+        <p className="lg:w-1/2 sm:w-1/2 text-justify">
           The fee stated is inclusive of taxes. Please pay this invoice at the
           bank. No cash must be given to any staff of the company.
           <b> Please put your child(ren)’s name(s) as a reference</b>. The proof

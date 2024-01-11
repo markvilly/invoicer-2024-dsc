@@ -18,6 +18,11 @@ label {
   background-color: rgb(249 115 22);
 }
 
+.border-blackened {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
 input,
 textarea {
   background-color: #f1f1f1;

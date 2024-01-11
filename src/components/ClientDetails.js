@@ -14,7 +14,7 @@ export default function ClientDetails({
         </h2>
       </article>
       {/* Clients details */}
-      <article className="mt-5 mb-10  flex md:grid grid-cols-2 gap-10">
+      <article className="mt-5 mb-10  flex grid grid-cols-2 gap-10">
         <div>
           <span className="font-bold text-gray-400 italic ">Name </span>
           <p className="text-lg">{clientName}</p>
@@ -25,7 +25,7 @@ export default function ClientDetails({
         </div>
       </article>
 
-      <article className="mt-5 mb-10  flex md:grid grid-cols-2 gap-10">
+      <article className="mt-5 mb-10  flex grid grid-cols-2 gap-10">
         <div>
           <span className="font-bold text-gray-400 italic ">Email </span>
           <p className="text-lg">{clientEmail}</p>

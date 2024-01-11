@@ -11,7 +11,7 @@ export default function Footer() {
           </h2>
         </article>
         <div>
-          <table width="100%" className="md:table-auto border-collapse">
+          <table width="100%" className="table-auto border-collapse">
             <tbody className="font-bold italic">
               <tr>
                 <td className="border border-gray-400 pl-2">Bank Name</td>
