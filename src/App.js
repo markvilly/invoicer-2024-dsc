@@ -53,6 +53,8 @@ function App() {
             <ClientDetails
               clientName={clientName}
               clientAddress={clientAddress}
+              clientEmail={clientEmail}
+              phone={phone}
             />
 
             <Table
@@ -64,6 +66,8 @@ function App() {
               setList={setList}
               total={total}
               setTotal={setTotal}
+              phone={phone}
+              clientEmail={clientEmail}
             />
             <Notes notes={notes} />
             <Footer

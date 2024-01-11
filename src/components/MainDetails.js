@@ -5,6 +5,13 @@ export default function MainDetails({ name, address }) {
     <div>
       {/* your details */}
       <section className="flex flex-col items-end justify-end ">
+        <img
+          width="150px"
+          src="\DSC LOGO PNG 1.png"
+          alt=""
+          srcset=""
+          className="absolute left-60 ml-4"
+        />
         <h2 className="font-bold md:text4l text-xl uppercase">{name}</h2>
         <p className="w-1/2 text-right">
           Sandvik Street, Off Chole Road, <br /> Masaki Dar es Salaam, TZ 11201

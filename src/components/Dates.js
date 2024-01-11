@@ -4,20 +4,25 @@ export default function Dates({ invoiceNumber, invoiceDate, dueDate }) {
   return (
     <div>
       {/* Dates*/}
-      <div className="p-1">
-        <span className=" font-bold">Invoice number: </span>
-        {invoiceNumber}
-      </div>
-      <article className="my-5 flex  items-end justify-end">
-        <ul>
-          <li className="p-1">
-            <span className=" font-bold">Invoice date: </span>
-            {invoiceDate}
-          </li>
-          <li className="p-1">
-            <span className=" font-bold">Due date: </span>
-            {dueDate}
-          </li>
+
+      <article className="mt-4 mb-5 flex  items-end justify-between">
+        <ul className="md:grid grid-cols-3 gap-10">
+          <div className="">
+            <span className=" font-bold text-gray-400 italic">
+              Invoice number
+            </span>
+            <div>{invoiceNumber}</div>
+          </div>
+          <div>
+            <span className=" font-bold text-gray-400 italic">
+              Invoice date{" "}
+            </span>
+            <li className="p-1">{invoiceDate}</li>
+          </div>
+          <div>
+            <span className=" font-bold text-gray-400 italic">Due date </span>
+            <li className="p-1">{dueDate}</li>
+          </div>
         </ul>
       </article>
       {/* End of dates */}

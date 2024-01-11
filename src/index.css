@@ -14,6 +14,9 @@ label {
   font-size: 1.05rem;
   color: #525252;
 }
+.bg-orange-400 {
+  background-color: rgb(249 115 22);
+}
 
 input,
 textarea {
