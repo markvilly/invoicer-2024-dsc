@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { MdDeleteForever } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
 
 export default function TableForm({
   description,
@@ -12,7 +14,11 @@ export default function TableForm({
   list,
   setList,
   setAmount,
+  total,
+  setTotal,
 }) {
+  const [isEditing, setIsEditing] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -23,15 +29,36 @@ export default function TableForm({
       rate,
       amount,
     };
+
     setDescription("");
     setQuantity("");
     setRate("");
     setAmount("");
     setList([...list, newItems]);
-    console.log(list);
+    setIsEditing(false);
   };
 
+  //calculate total amount in table
+
+  useEffect(() => {
+    // Calculate total from list items
+    let sum = 0;
+    list.forEach((item) => {
+      sum += item.amount;
+    });
+    setTotal(sum);
+  }, [list]);
+
   //Edit function
+  const editRow = (id) => {
+    const editingRow = list.find((row) => row.id === id);
+    setList(list.filter((row) => row.id !== id));
+    setIsEditing(true);
+    setDescription(editingRow.description);
+    setQuantity(editingRow.quantity);
+    setRate(editingRow.rate);
+  };
+
   //Delete function
   const deleteRow = (id) => setList(list.filter((row) => row.id !== id));
   return (
@@ -44,6 +71,7 @@ export default function TableForm({
             name="description"
             id="description"
             placeholder="item description"
+            autoComplete="off"
             value={description}
             onChange={(e) => {
               setDescription(e.target.value);
@@ -59,6 +87,7 @@ export default function TableForm({
               name="quantity"
               id="quantity"
               placeholder="item quantity"
+              autoComplete="off"
               value={quantity}
               onChange={(e) => {
                 setQuantity(e.target.value);
@@ -73,6 +102,7 @@ export default function TableForm({
               name="rate"
               id="rate"
               placeholder="item rate"
+              autoComplete="off"
               value={rate}
               onChange={(e) => {
                 setRate(e.target.value);
@@ -89,7 +119,7 @@ export default function TableForm({
           type="submit"
           className="mt-5 mb-10 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
         >
-          Add Table Item
+          {isEditing ? "Editing Row Item" : "Add Table Item"}
         </button>
       </form>
 
@@ -114,15 +144,29 @@ export default function TableForm({
                 <td>{description}</td>
                 <td className="text-center">{quantity}</td>
                 <td className="text-center">{rate}</td>
-                <td className="text-center">{(amount = rate * quantity)}</td>
+                <td className="text-center total">
+                  {parseFloat((amount = rate * quantity)).toFixed(2)}
+                </td>
                 <td>
-                  <button onClick={() => deleteRow(id)}>Delete</button>
+                  <button onClick={() => deleteRow(id)}>
+                    <MdDeleteForever className="text-red-500 font-bold text-2xl ml-2" />
+                  </button>
+                </td>
+                <td>
+                  <button onClick={() => editRow(id)}>
+                    <FaEdit className="text-green-500 font-bold text-lg" />
+                  </button>
                 </td>
               </tr>
             </tbody>
           </React.Fragment>
         ))}
       </table>
+      <div>
+        <h2 className="font-bold text-4xl text-gray-800 ">
+          Tshs. {total.toLocaleString()}
+        </h2>
+      </div>
     </div>
   );
 }
