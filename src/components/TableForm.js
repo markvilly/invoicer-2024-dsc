@@ -47,7 +47,7 @@ export default function TableForm({
       sum += item.amount;
     });
     setTotal(sum);
-  }, [list]);
+  }, [list, setTotal]);
 
   //Edit function
   const editRow = (id) => {
@@ -162,7 +162,7 @@ export default function TableForm({
           </React.Fragment>
         ))}
       </table>
-      <div>
+      <div className="mb-10">
         <h2 className="font-bold text-4xl text-gray-800 ">
           Tshs. {total.toLocaleString()}
         </h2>

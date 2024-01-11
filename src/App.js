@@ -45,15 +45,16 @@ function App() {
           <div>
             <Header handlePrint={handlePrint} />
             <MainDetails name={name} address={address} />
-            <ClientDetails
-              clientName={clientName}
-              clientAddress={clientAddress}
-            />
             <Dates
               invoiceDate={invoiceDate}
               invoiceNumber={invoiceNumber}
               dueDate={dueDate}
             />
+            <ClientDetails
+              clientName={clientName}
+              clientAddress={clientAddress}
+            />
+
             <Table
               description={description}
               quantity={quantity}
