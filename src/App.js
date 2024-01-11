@@ -10,7 +10,7 @@ import Table from "./components/Table";
 import TableForm from "./components/TableForm";
 
 function App() {
-  const [showInvoice, setShowInvoice] = useState(true);
+  const [showInvoice, setShowInvoice] = useState(false);
   const [name, setName] = useState("DSC Company Limited");
   const [address, setAddress] = useState("Chole Road, Masaki");
   const [email, setEmail] = useState("shivazera@gmail.com");
@@ -32,6 +32,7 @@ function App() {
   const [quantity, setQuantity] = useState("");
   const [rate, setRate] = useState("");
   const [amount, setAmount] = useState("");
+  const [list, setList] = useState([]);
 
   const handlePrint = () => {
     window.print();
@@ -57,6 +58,8 @@ function App() {
               quantity={quantity}
               rate={rate}
               amount={amount}
+              list={list}
+              setList={setList}
             />
             <Notes notes={notes} />
             <Footer
@@ -296,6 +299,8 @@ function App() {
                   setRate={setRate}
                   amount={amount}
                   setAmount={setAmount}
+                  setList={setList}
+                  list={list}
                 />
               </article>
 
