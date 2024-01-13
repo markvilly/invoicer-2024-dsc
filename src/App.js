@@ -15,8 +15,8 @@ function App() {
   const [name, setName] = useState("DSC Company Limited");
   const [address, setAddress] = useState("Chole Road, Masaki");
   const [email, setEmail] = useState("shivazera@gmail.com");
-  const [bankName, setBankName] = useState("ABSSA");
-  const [bankAccount, setBankAccount] = useState("121342323");
+  // const [bankName, setBankName] = useState("ABSSA");
+  // const [bankAccount, setBankAccount] = useState("121342323");
   const [branch, setBranch] = useState("Palm Beach Premier");
   const [website, setWebsite] = useState("www.google.com");
   const [clientName, setClientName] = useState("Mama Barrick");
@@ -102,7 +102,7 @@ function App() {
             {/* name, address, client name, client address, invoice number, invoice date, due date, notes */}
 
             <div className="flex flex-col justify-center">
-              <article className="md:grid grid-cols-2 gap-10">
+              {/* <article className="md:grid grid-cols-2 gap-10">
                 <div className="flex flex-col">
                   <label htmlFor="name">Full Name</label>
                   <input
@@ -129,9 +129,9 @@ function App() {
                     onChange={(e) => setAddress(e.target.value)}
                   />
                 </div>
-              </article>
+              </article> */}
 
-              <article className="md:grid grid-cols-2 gap-10">
+              {/* <article className="md:grid grid-cols-2 gap-10">
                 <div className="flex flex-col">
                   <label htmlFor="email">Email</label>
                   <input
@@ -189,9 +189,9 @@ function App() {
                     onChange={(e) => setBranch(e.target.value)}
                   />
                 </div>
-              </article>
+              </article> */}
 
-              <label htmlFor="bankAccount">Bank Account Number</label>
+              {/* <label htmlFor="bankAccount">Bank Account Number</label>
               <input
                 className=" mb-5 mt-1 "
                 type="name"
@@ -201,7 +201,7 @@ function App() {
                 autoComplete="off"
                 value={bankAccount}
                 onChange={(e) => setBankAccount(e.target.value)}
-              />
+              /> */}
 
               <article className="md:grid grid-cols-2 gap-10 md:mt-20">
                 <div className="flex flex-col">

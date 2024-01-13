@@ -22,20 +22,24 @@ export default function TableForm({
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newItems = {
-      id: uuidv4(),
-      description,
-      quantity,
-      rate,
-      amount,
-    };
+    if (!description || !quantity || !rate) {
+      alert("Please fill out all fields");
+    } else {
+      const newItems = {
+        id: uuidv4(),
+        description,
+        quantity,
+        rate,
+        amount,
+      };
 
-    setDescription("");
-    setQuantity("");
-    setRate("");
-    setAmount("");
-    setList([...list, newItems]);
-    setIsEditing(false);
+      setDescription("");
+      setQuantity("");
+      setRate("");
+      setAmount("");
+      setList([...list, newItems]);
+      setIsEditing(false);
+    }
   };
 
   //calculate total amount in table
