@@ -5,7 +5,7 @@ export default function Notes() {
     <div>
       {/* Notes */}
 
-      <section className="mt-20 mb-5 flex grid grid-cols-1">
+      <section className="mt-10 mb-5 flex grid grid-cols-1">
         {/* text area */}
         <p className="lg:w-1/2 sm:w-1/2 text-justify">
           The fee stated is inclusive of taxes. Please pay this invoice at the

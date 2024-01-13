@@ -13,23 +13,25 @@ export default function Table({ list, total }) {
       </article>
       <table width="100%" className="mb-20">
         <thead>
-          <tr className="border-black bg-orange-400 italic">
-            <th>Item Descsription</th>
-            <th>Quantity</th>
-            <th>Rate</th>
-            <th>Amount</th>
+          <tr className="border-blackened-tabl bg-orange-400 italic">
+            <th className="border-blackened-tabl">Item Descsription</th>
+            <th className="border-blackened-tabl">Quantity</th>
+            <th className="border-blackened-tabl">Rate</th>
+            <th className="border-blackened-tabl">Amount</th>
           </tr>
         </thead>
         {list.map(({ id, description, quantity, rate, amount }) => (
           <React.Fragment key={id}>
             <tbody>
               <tr>
-                <td>{description}</td>
-                <td className="text-center">{quantity}</td>
-                <td className="text-center">
+                <td className="border-blackened-tabl">{description}</td>
+                <td className=" border-blackened-tabl text-center">
+                  {quantity}
+                </td>
+                <td className=" border-blackened-tabl text-center">
                   {(rate - rate * taxRatio).toFixed(2)}
                 </td>
-                <td className="text-center">
+                <td className="border-blackened-tabl text-center">
                   {(amount = rate * quantity).toFixed(2)}
                 </td>
               </tr>
