@@ -18,17 +18,15 @@ function App() {
   // const [bankName, setBankName] = useState("ABSSA");
   // const [bankAccount, setBankAccount] = useState("121342323");
   const [branch, setBranch] = useState("Palm Beach Premier");
-  const [website, setWebsite] = useState("www.google.com");
-  const [clientName, setClientName] = useState("Mama Barrick");
-  const [clientAddress, setClientAddress] = useState("Masaki, DYC");
-  const [invoiceNumber, setInvoiceNumber] = useState("12");
-  const [invoiceDate, setInvoiceDate] = useState("1/1/2024");
-  const [dueDate, setDueDate] = useState("1/10/2024");
-  const [notes, setNotes] = useState("Pay through the DSC Bank details");
-  const [phone, setPhone] = useState("0686384019");
-  const [clientEmail, setClientEmail] = useState(
-    "markpaulbusiness66@gmail.com"
-  );
+  const [website, setWebsite] = useState("");
+  const [clientName, setClientName] = useState("");
+  const [clientAddress, setClientAddress] = useState("");
+  const [invoiceNumber, setInvoiceNumber] = useState("");
+  const [invoiceDate, setInvoiceDate] = useState("");
+  const [dueDate, setDueDate] = useState("");
+  const [notes, setNotes] = useState("");
+  const [phone, setPhone] = useState("");
+  const [clientEmail, setClientEmail] = useState("");
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState("");
   const [rate, setRate] = useState("");
@@ -202,6 +200,9 @@ function App() {
                 value={bankAccount}
                 onChange={(e) => setBankAccount(e.target.value)}
               /> */}
+              <article className="font-bold text-4xl flex flex-col items-center ">
+                <h1>Fill Out Your Client Details</h1>
+              </article>
 
               <article className="md:grid grid-cols-2 gap-10 md:mt-20">
                 <div className="flex flex-col">
