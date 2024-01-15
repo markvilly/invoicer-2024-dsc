@@ -44,16 +44,16 @@ function App() {
   return (
     <div className="App">
       <main className="bg-white p-5 m-5 md:max-w-xl md:mx-auto lg:mx-auto xl:max-w-4xl rounded shadow">
-        <ReactToPrint
-          trigger={() => (
-            <button className="bg-gray-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-gray-500 hover:bg-transparent hover:text-gray-500 mb-5 transition-all duration-300 ">
-              Print/ Download
-            </button>
-          )}
-          content={() => componentRef.current}
-        />
         {showInvoice ? (
           <>
+            <ReactToPrint
+              trigger={() => (
+                <button className="bg-gray-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-gray-500 hover:bg-transparent hover:text-gray-500 mb-5 transition-all duration-300 ">
+                  Print/ Download
+                </button>
+              )}
+              content={() => componentRef.current}
+            />
             <div ref={componentRef} className="p-5">
               <Header handlePrint={handlePrint} />
               <MainDetails name={name} address={address} />
